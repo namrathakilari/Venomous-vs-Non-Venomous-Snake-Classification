@@ -1,10 +1,10 @@
-# 🐍 Venomous vs Non-Venomous Snake Classification using ResNet50
+#  Venomous vs Non-Venomous Snake Classification using ResNet50
 
 > A safety-critical image classifier that identifies whether a snake is venomous or non-venomous using Transfer Learning with fine-tuned ResNet50 — designed to assist rural communities, forest rangers, and wildlife rescue teams.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Given a photo of a snake, the model predicts its danger level with a confidence score and a **Grad-CAM heatmap** showing exactly which part of the snake influenced the decision.
 
@@ -22,7 +22,7 @@ venomous       █████████████████████�
 
 ---
 
-## 🏷️ Classes & Species Covered
+##  Classes & Species Covered
 
 | Class | Species |
 |---|---|
@@ -31,7 +31,7 @@ venomous       █████████████████████�
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 ```
 ResNet50 (pretrained on ImageNet)
@@ -50,7 +50,7 @@ ResNet50 (pretrained on ImageNet)
 
 ---
 
-## 🧩 Project Steps
+##  Project Steps
 
 | Step | Description |
 |---|---|
@@ -67,7 +67,7 @@ ResNet50 (pretrained on ImageNet)
 
 ---
 
-## 📊 Visualisations
+##  Visualisations
 
 - **Figure 1:** Class distribution bar chart (train vs val)
 - **Figure 2:** Sample images grid (5 per class)
@@ -78,7 +78,7 @@ ResNet50 (pretrained on ImageNet)
 
 ---
 
-## 🧮 Results
+##  Results
 
 | Class | Precision | Recall | F1-Score | Support |
 |---|---|---|---|---|
@@ -92,7 +92,7 @@ ResNet50 (pretrained on ImageNet)
 
 ---
 
-## 🔥 Grad-CAM: Model Interpretability
+##  Grad-CAM: Model Interpretability
 
 Unlike standard classifiers, this project includes **Gradient-weighted Class Activation Mapping (Grad-CAM)** to visualise *where* the model looks when making a prediction. This verifies the model is responding to **scale patterns, head shape, and body markings** — not background elements like grass or rocks.
 
@@ -100,7 +100,7 @@ This is especially critical for a safety application where trust in the model's 
 
 ---
 
-## ⚙️ Requirements
+##  Requirements
 
 ```bash
 pip install torch torchvision icrawler pillow matplotlib seaborn scikit-learn
@@ -110,7 +110,7 @@ pip install torch torchvision icrawler pillow matplotlib seaborn scikit-learn
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ```python
 # Predict on any snake image
@@ -124,7 +124,7 @@ predict_snake('your_snake_image.jpg')
 
 ---
 
-## 🔄 Comparison: Cattle/Buffalo vs This Project
+##  Comparison: Cattle/Buffalo vs This Project
 
 | Aspect | Cattle vs Buffalo | Snake Classification |
 |---|---|---|
@@ -137,7 +137,7 @@ predict_snake('your_snake_image.jpg')
 
 ---
 
-## 💡 Future Improvements
+##  Future Improvements
 
 1. **Multi-class species ID** — extend to species-level classification (cobra vs krait vs viper)
 2. **Lower venomous threshold** — tune decision boundary to maximise recall for dangerous snakes
@@ -147,12 +147,3 @@ predict_snake('your_snake_image.jpg')
 
 ---
 
-## 📁 File Structure
-
-```
-Snake_Classification_ResNet50/
-│
-├── Snake_Classification_ResNet50.ipynb   # Main notebook (all steps)
-├── best_snake_model.pth                  # Best saved model weights
-└── README.md                             # Project documentation
-```
